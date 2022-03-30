@@ -9,16 +9,16 @@ import './DragAndDrop.css';
 
 //initializing items for each column
 const itemsData = {
-  ["Column A"]: [
+  "Column A": [
     { id: uuidv4(), title: "Item 1", subtitle: "Column A" },
     { id: uuidv4(), title: "Item 2", subtitle: "Column A" },
     { id: uuidv4(), title: "Item 3", subtitle: "Column A" },
   ],
-  ["Column B"]: [
+  "Column B": [
     { id: uuidv4(), title: "Item 4", subtitle: "Column B" },
     { id: uuidv4(), title: "Item 5", subtitle: "Column B" }
   ],
-  ["Column C"]: [
+  "Column C": [
     { id: uuidv4(), title: "Item 6", subtitle: "Column C" },
   ]
 };
@@ -47,7 +47,7 @@ export const DragAndDrop = () => {
   const onDragEnd = result => {
     if (!result.destination) return;
     const { source, destination } = result;
-    
+
     //moving to different column
     if (source.droppableId !== destination.droppableId) {
       const sourceDroppable = columns[source.droppableId];
@@ -95,6 +95,7 @@ export const DragAndDrop = () => {
                   <Stack
                     {...provided.droppableProps}
                     className="ColumnContainer"
+                    sx={{ bgcolor: "secondary.main" }}
                     ref={provided.innerRef}
                     gap={1}
                   >

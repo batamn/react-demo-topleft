@@ -20,8 +20,8 @@ export const DraggableCard = ({ item, index }) => {
             {...provided.dragHandleProps}
             sx={{
               backgroundColor: snapshot.isDragging
-                ? "#F8D0C3"
-                : "#C19F94",
+                ? "secondary.light"
+                : "secondary.dark",
               ...provided.draggableProps.style
             }}>
             <CardHeader

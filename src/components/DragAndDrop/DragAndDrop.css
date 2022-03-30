@@ -9,11 +9,9 @@
     padding: 4px;
     width: 200px;
     min-height: 600px;
-    background: #F6EEDC;
     margin: 0px 8px;
 }
 
 .DraggableCard {
-    color: white !important;
     user-select: none;
 }
